@@ -1,12 +1,13 @@
 <?php
 
 use App\Models\Category;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use App\Models\Post;
 
 
 Route::get('/', fn() => view('posts', [
-    'posts' => Post::with('category')->get()
+    'posts' => Post::latest()->with(['category', 'author'])->get()
 ]));
 
 Route::get('posts/{post:slug}', fn(Post $post) => view('post', [
@@ -14,3 +15,5 @@ Route::get('posts/{post:slug}', fn(Post $post) => view('post', [
 ]));
 
 Route::get('categories/{category:slug}', fn(Category $category) => view('posts', ['posts' => $category->posts] ));
+
+Route::get('authors/{author:username}', fn(User $author) => view('posts', ['posts' => $author->posts] ));
