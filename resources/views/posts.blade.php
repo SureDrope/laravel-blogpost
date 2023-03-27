@@ -8,10 +8,5 @@
             <p class="text-center"> No posts yet. Please check back later.</p>
         @endif
 
-{{--        <div class="lg:grid lg:grid-cols-3">--}}
-{{--            <x-post-card />--}}
-{{--            <x-post-card />--}}
-{{--            <x-post-card />--}}
-{{--        </div>--}}
     </main>
 </x-layout>
