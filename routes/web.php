@@ -17,6 +17,5 @@ Route::get('posts/{post:slug}', [PostController::class, 'show']);
 //]))->name('category');
 
 Route::get('authors/{author:username}', fn(User $author) => view('posts', [
-    'posts' => $author->posts,
-    'categories' => Category::all()
+    'posts' => $author->posts
 ]));
