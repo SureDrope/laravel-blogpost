@@ -57,5 +57,7 @@
         </div>
     </footer>
 
+    <x-flash key="success"/>
+
 </section>
 </body>
