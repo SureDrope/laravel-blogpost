@@ -7,10 +7,11 @@ use App\Models\Post;
 
 class PostController extends Controller
 {
+    private $filters = ['search', 'category', 'author'];
     public function index()
     {
         return view('posts.index', [
-            'posts' => Post::latest()->filter(request(['search', 'category', 'author']))->get(),
+            'posts' => Post::latest()->filter(request($this->filters))->get(),
         ]);
     }
 
