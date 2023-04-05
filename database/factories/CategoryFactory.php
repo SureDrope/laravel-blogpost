@@ -21,8 +21,8 @@ class CategoryFactory extends Factory
 //            'slug' => $this->faker->slug,
 //        ];
         return [
-            'name' => fake()->unique()->word,
-            'slug' => fake()->unique()->slug,
+            'name' => fake()->unique()->word(),
+            'slug' => fake()->unique()->slug(),
         ];
     }
 }
