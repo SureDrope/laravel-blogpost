@@ -16,10 +16,10 @@ class CategoryFactory extends Factory
      */
     public function definition(): array
     {
-//        return [
-//            'name' => $this->faker->word,
-//            'slug' => $this->faker->slug,
-//        ];
+        //        return [
+        //            'name' => $this->faker->word,
+        //            'slug' => $this->faker->slug,
+        //        ];
         return [
             'name' => fake()->unique()->word(),
             'slug' => fake()->unique()->slug(),

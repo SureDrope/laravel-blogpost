@@ -16,7 +16,6 @@ return new class extends Migration
             $table->text('body');
             $table->timestamps();
 
-
             $table->foreignId('user_id')->constrained()->cascadeOnDelete();
             $table->foreignId('post_id')->constrained()->cascadeOnDelete();
             // $table->unsignedBigInteger('post_id');
